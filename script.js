@@ -36,7 +36,6 @@ textarea2.addEventListener('input', function () {
     try {
       const response = await fetch(url, options);
       const result = await response.json();
-      console.log(result)
       if (result.predictions && result.predictions.length > 0) {
         const prediction = result.predictions[0].text;
         const lastWordTextarea1 = textarea1.value.split(' ').pop(); // Obtener la última palabra de textarea1
